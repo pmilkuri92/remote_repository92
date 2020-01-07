@@ -1,0 +1,53 @@
+<html>
+{% load staticfiles %}
+<head>
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/home2.html.css' %}">
+
+</head>
+<style>
+    .jumbotron{
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 50px;
+        background: lightgreen;
+    }
+    a{
+        margin: 0px 50px;
+    }
+    body{
+        text-align: center;
+        font-weight: bold;
+        background: lightblue;
+    }
+    h1{
+        color: white;
+        background: blue;
+        font-weight: bold;
+        font-size: 50px;
+    }
+    .btn {
+        color: white;
+        font-size: 25px;
+        background: blue;
+        font-weight: bold;
+    }
+</style>
+<body>
+<h1>CURD Operation</h1>
+<div class="container">
+    <div class="jumbotron">
+        <div>
+            <a href="/create" class="btn btn-primary btn-lg">Create</a>
+            <a href="/update" class="btn btn-primary btn-lg">Updae</a>
+            <a href="/retrieve" class="btn btn-primary btn-lg">Retrieve</a>
+            <a href="/delete" class="btn btn-primary btn-lg">Delete</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+{% load staticfiles %}
+<head>
+    <title>Delete Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/home2.html.css' %}">
+
+</head>
+<style>
+    body{
+
+    }
+    h2{
+        color: deeppink;
+        font-weight: bold;
+    }
+    label{
+        color: greenyellow;
+    }
+    a{
+        color: red;
+        font-weight: bold;
+        font-size: 15px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2>Dlete the Product...</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label>Enter product ID:</label>
+                <input type="number" name="pid" placeholder="product id" required class="form-control"><br>
+                <center>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger">
+                </center>
+            </form>
+            <a href="/home">GoTo Home Page</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

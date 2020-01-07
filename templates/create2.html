@@ -1,0 +1,74 @@
+<html>
+{% load staticfiles %}
+<head>
+    <title>Create</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/create2.css' %}">
+
+</head>
+<style>
+    body{
+        background: cyan;
+
+    }
+    h2{
+        color: blueviolet;
+        font-weight: bold;
+    }
+    label{
+       color: deeppink;
+    }
+    .form-control{
+        background: white;
+        color: blue;
+    }
+    a{
+        color: blue;
+        font-weight: bold;
+        font-size: 15px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2>Please Provide Product Details...</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label>Enter Product ID:</label>
+                    <input type="number" name="pid" placeholder="product id" required class="form-control">
+                <label>Enter Product Name:</label>
+                    <input type="text" name="pname" placeholder="product name" required class="form-control">
+                <label>Enter Product Cost:</label>
+                    <input type="number" name="pcost" placeholder="product cost" required class="form-control">
+            <label>Enter Product Class:</label>
+                <input type="text" name="pclass" placeholder="product class" required class="form-control">
+            <label>Enter Product Color:</label>
+                <input type="text" name="pcolor" placeholder="product color" required class="form-control">
+            <label>Enter No of Products:</label>
+                <input type="number" name="nop" placeholder="number of products" required class="form-control">
+            <label>Enter manufacturing Date:</label>
+                <input type="date" name="mfg" placeholder="mfg_date" required class="form-control">
+            <label>Enter Expiry Date:</label>
+                <input type="date" name="exp" placeholder="exp_date" required class="form-control">
+            <label>Enter Customer Name:</label>
+                <input type="text" name="cname" placeholder="customer name" required class="form-control">
+            <label>Enter Customer mobile Number:</label>
+                <input type="number" name="mobile" placeholder="mobile number" required class="form-control">
+            <label>Enter Customer Mail ID:</label>
+                <input type="email" name="email" placeholder="pst@gmail.com" required class="form-control"><br>
+                <center>
+                    <input type="submit" name="Submit" class="btn btn-success">
+                    <input type="reset" name="Clear" class="btn btn-danger">
+                </center>
+                <a href="/home">GoTo Home Page</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

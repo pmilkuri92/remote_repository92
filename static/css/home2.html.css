@@ -1,0 +1,11 @@
+body{
+    background: lightblue;
+}
+.jumbotron{
+    margin-left: 50px;
+    margin-right: 50px;
+    background: red;
+}
+a{
+    margin-right: 50px;
+}

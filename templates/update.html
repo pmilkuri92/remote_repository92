@@ -1,0 +1,50 @@
+<html>
+{% load staticfiles %}
+<head>
+    <title>Update Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/retrieve2.css' %}">
+
+</head>
+<style>
+    body{
+        background: bisque;
+
+    }
+    h2{
+        color: black;
+        font-weight: bold;
+    }
+    label{
+        color: red;
+    }
+    a{
+        color: black;
+        font-size: 15px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2>Update Product Details...</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label>Enter product ID:</label>
+                <input type="number" name="pid" placeholder="product id" required class="form-control">
+                <label>Enter Product Cost:</label>
+                <input type="number" name="pcost" placeholder="product cost" required class="form-control"><br>
+                <center>
+                    <input type="submit" value="Update" class="btn btn-success">
+                    <input type="reset" value="Clear" class="btn btn-danger">
+                </center>
+            </form>
+            <a href="/home">GoTo Home Page</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
